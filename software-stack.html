@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<head>
+  <title>Buddycloud Software Stack</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!--  <link href="img/apple-touch-icon-144x144-precomposed.png" sizes="144x144" rel="apple-touch-icon-precomposed">-->
+  <link rel="shortcut icon" href="theme/vendor/buddycloud-styles/dist/img/icons/favicon.ico" />
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300i-transtalic,400italic,600italic,700italic,300,400,600,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,700,900,600,500,200" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="theme/vendor/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="theme/vendor/buddycloud-styles/dist/css/buddycloud-styles.min.css" type="text/css" />
+  <link rel="stylesheet" href="theme/css/site.css" type="text/css" />
+ 
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-1075750-9', 'auto');
+		  ga('send', 'pageview');
+		
+		</script>
+</head>
+<body class="buddycloud-software-stack">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+      <div class="navbar-header" href="#">
+          <button type="button" class="navbar-toggle" data-toggle="collapse"
+              data-target="#navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">buddycloud</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+              <li  >
+                  <a href="http://buddycloud.com/api">
+                      API
+                  </a>
+              </li>
+              <li  >
+                  <a href="http://buddycloud.com/features">
+                      Features
+                  </a>
+              </li>
+              <li  >
+                  <a href="http://buddycloud.com/get-started">
+                      Get Started
+                  </a>
+              </li>
+              <li  >
+                  <a href="http://buddycloud.com/how-buddycloud-works">
+                      How it works
+                  </a>
+              </li>
+              <li  >
+                  <a href="http://buddycloud.com/contact">
+                      Contact
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+      <div class="col-md-3 col-sm-3">
+      </div>
+      <div class="col-md-9 col-sm-9" role="main">
+    <h1 class="page-header main-title">Buddycloud Software Stack</h1>
+
+    <div class="bs-docs-section">
+    
+  <p class="lead">
+      This is a selection of apps and services built with the Buddycloud stack.
+  </p>
+  <script id="isotope-template" type="x-tmpl-mustache">
+      <div class="btn-toolbar" role="toolbar">
+          <div class="btn-group btn-group-lg">
+          {{#buttons}}
+              <button class='isotope-btn btn btn-default' type='button' data-type='{{name}}' onclick="reorder('{{name}}');">
+                  {{name}}s
+              </button>
+          {{/buttons}}
+          </div>
+          <div class="btn-group btn-group-lg">
+              <button class='isotope-btn btn btn-default' type='button' data-type='All' onclick="shuffleAll();">
+                  All
+              </button>
+          </div>
+      </div>
+      <div id='isotope-container'>
+      {{#items}}
+      <div class='isotope-item' data-type='{{type}}'>
+          <h2>{{title}}</h2>
+          <p>{{description}}</p>
+          {{#image}}
+          <figure class='credits'>
+              <img class='img-responsive' src='{{screenshot}}' alt=''/>
+              {{#caption}}
+              <figcaption>{{caption}}</figcaption>
+              {{/caption}}
+          </figure>
+          {{/image}}
+          <div>
+              <div>
+                  {{#info_link}}
+                  <div>
+                      <a href='{{info_link}}' target='_blank'>
+                          <span class='glyphicon glyphicon-file'></span>
+                      </a>
+                  </div>
+                  {{/info_link}}
+                  {{#demo_link}}
+                  <div>
+                      <a href='{{demo_link}}' target='_blank'>
+                          <span class='glyphicon glyphicon-link'></span>
+                      </a>
+                  </div>
+                  {{/demo_link}}
+              </div>
+              <div>
+                  {{#info_link}}
+                  <div>
+                      <a href='{{info_link}}' target='_blank'>
+                          <small>Learn more</small>
+                      </a>
+                  </div>
+                  {{/info_link}}
+                  {{#demo_link}}
+                  <div>
+                      <a href='{{demo_link}}' target='_blank'>
+                          <small>Demo</small>
+                      </a>
+                  </div>
+                  {{/demo_link}}
+              </div>
+          </div>
+      </div>
+      {{/items}}
+      </div>
+      <div class="btn-toolbar" role="toolbar">
+          <div class="btn-group btn-group-lg">
+          {{#buttons}}
+              <button class='isotope-btn btn btn-default' type='button' data-type='{{name}}' onclick="reorder('{{name}}');">
+                  {{name}}s
+              </button>
+          {{/buttons}}
+          </div>
+          <div class="btn-group btn-group-lg">
+              <button class='isotope-btn btn btn-default' type='button' data-type='All' onclick="shuffleAll();">
+                  All
+              </button>
+          </div>
+      </div>
+  </script>
+  <div id="isotope-root">
+  </div>
+  <script language="javascript" type="text/javascript">
+    _isotopeRoot = "#isotope-root";
+    _isotopeTemplate = "#isotope-template";
+    _isotopeView = {
+        buttons: [
+            {
+                name: 'API'
+            },
+            {
+                name: 'Client'
+            },
+            {
+                name: 'Service'
+            }
+        ],
+        items: [
+            {
+                title: 'REST API Server',
+                description: 'Designed for mobile app developers, the HTTP API is a simple way to get and update Buddycloud channel content.',
+                type: 'API',
+                info_link: 'https://github.com/buddycloud/buddycloud-http-api/blob/master/README.md',
+                demo_link: 'http://buddycloud.com/api'
+            },
+            {
+                title: 'XMPP-FTW',
+                description: 'An easy-to-use Javascript SDK for building browser-based messaging and Buddycloud apps.',
+                type: 'API',
+                info_link: 'https://xmpp-ftw.jit.su/manual/extensions#buddycloud', demo_link: 'https://xmpp-ftw.jit.su/demo'
+            },
+            {
+                title: 'Android demo client',
+                description: 'A demo client built on Android and the Buddycloud API.',
+                type: 'Client',
+                image: {
+                    screenshot: '/theme/img/isotope/buddycloud_android_demo_client.png'
+                },
+                info_link: 'https://github.com/buddycloud/buddycloud-android/blob/master/README.md',
+                demo_link: 'https://play.google.com/store/apps/details?id=com.buddycloud'
+            },
+            {
+                title: 'Bccc',
+                description: 'BCCC (Buddycloud console client) is a Python application to access channels directly using XMPP. ',
+                type: 'Client',
+                info_link: 'https://github.com/Schnouki/bccc/blob/master/README.md',
+                demo_link: 'https://www.youtube.com/watch?v=vi1nyCPDGTk&feature=youtu.be'
+            },
+            {
+                title: 'Buddycloud server',
+                description: 'Stores, synchronises and updates Buddycloud channels.',
+                type: 'Service',
+                info_link: 'https://github.com/buddycloud/buddycloud-server-java/blob/master/README.md'
+            },
+            {
+                title: 'Buddycloud protocol tester',
+                description: 'Test your own Buddycloud install.',
+                type: 'Service',
+                image: {
+                    screenshot: '/theme/img/isotope/buddycloud_protocol_tester.png'
+                },
+                info_link: 'https://github.com/buddycloud/buddycloud-tests-framework/blob/master/README.md',
+                demo_link: 'http://protocol.buddycloud.com'
+            },
+            {
+                title: 'Buddycloud XEP',
+                description: 'The realtime messaging protocol that powers the Buddycloud stack. This specification covers how clients update channels, followers and subscriptions. And how servers relay messages.',
+                type: 'API',
+                info_link: 'http://buddycloud.github.io/buddycloud-xep'
+            },
+            {
+                title: 'Buddycloud Web-app',
+                description: 'A webclient built around the HTTP API.',
+                type: 'Client',
+                image: {
+                    screenshot: '/theme/img/isotope/buddycloud_webclient.jpg',
+                },
+                info_link: 'https://github.com/buddycloud/webclient/blob/dev-candy/README.md',
+                demo_link: 'https://demo.buddycloud.com'
+            },
+            {
+                title: 'Bummer',
+                description: 'A soon to be released Buddycloud client.',
+                type: 'Client'
+            },
+            {
+                title: 'Push Notification server',
+                description: 'Configure and push Buddycloud events to mobile and email.',
+                type: 'Service',
+                info_link: 'https://github.com/buddycloud/buddycloud-pusher/blob/master/README.md'
+            },
+            {
+                title: 'Buddycloud media server',
+                description: 'Share and synchronise media (and avatars) between different sites running Buddycloud.',
+                type: 'Service',
+                info_link: 'https://github.com/buddycloud/buddycloud-media-server/blob/master/README.md',
+                demo_link: 'https://demo.buddycloud.org/api/team@topics.buddycloud.org/media/avatar?maxheight=200&maxwidth=200'
+            },
+            {
+                title: 'Friend Finder',
+                description: 'Leverage other social graphs to find buddycloud users.',
+                type: 'Service',
+                info_link: 'https://github.com/buddycloud/buddycloud-friend-finder/blob/master/README.md'
+            },
+            {
+                title: 'Search Engine',
+                description: 'Find content.',
+                type: 'Service',
+                image: {
+                    screenshot: '/theme/img/isotope/buddycloud_search_engine.jpg',
+                    caption: 'In use by the Webclient'
+                },
+                info_link: 'https://github.com/buddycloud/channel-directory/blob/master/README.md'
+            },
+            {
+                title: 'Channel recommendation Engine',
+                description: 'Recommend interesting content based on what you follow.',
+                type: 'Service',
+                info_link: 'https://github.com/buddycloud/channel-directory/blob/master/README.md',
+                demo_link: 'https://demo.buddycloud.org/api/team@topics.buddycloud.org/similar'
+            }
+        ]
+    };
+  </script>
+
+    </div>
+      </div>
+  </div>
+  <nav>
+      <hr/>
+      <div class="container">
+          <p class="text-muted pull-right">
+              Made with love. 
+              <a href="https://github.com/buddycloud/buddycloud.com">
+                  Corrections welcomed
+              </a>
+              .
+          </p>
+      </div>
+  </nav>
+</div>
+
+  <script src="theme/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="theme/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="theme/vendor/buddycloud-styles/dist/js/buddycloud-styles.min.js"></script>
+  <script src="theme/vendor/raphael/raphael-min.js"></script>
+  <script src="theme/vendor/underscore/underscore-min.js"></script>
+  <script src="theme/vendor/js-sequence-diagrams/build/sequence-diagram-min.js"></script>
+  <script src="theme/js/sequence-diagrams.js"></script>
+  <script src="theme/vendor/isotope/isotope.pkgd.min.js"></script>
+  <script src="theme/vendor/isotope/cells-by-row.js"></script>
+  <script src="theme/vendor/mustache/jquery.mustache.js"></script>
+  <script src="theme/js/isotope-mustache.config.js"></script>
+</body>
+</html>
